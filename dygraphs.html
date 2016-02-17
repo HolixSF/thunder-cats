@@ -1,0 +1,79 @@
+<!-- dygraphs -->
+
+<html>
+<head>
+  <title></title>
+
+
+  <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7; IE=EmulateIE9">
+    <!--[if IE]>
+    <script type="text/javascript" src="../excanvas.js"></script>
+    <![endif]-->
+    <!--
+    For production (minified) code, use:
+    <script type="text/javascript" src="dygraph-combined.js"></script>
+    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dygraph/1.1.1/dygraph-combined.js"></script>
+    <script type="text/javascript" src="js/data.js"></script>
+    <style type="text/css">
+    #bordered {
+      border: 1px solid red;
+    }
+    </style>
+</head>
+<body>
+<div id="bordered" style="width:600px; height:300px;">
+    <div style="text-align: left; position: relative; width: 600px; height: 300px;">
+        <canvas width="600" height="300" style="position: absolute; width: 600px; height: 300px;"></canvas>
+        <canvas width="600" height="300" style="position: absolute; width: 600px; height: 300px;"></canvas>
+        <div style="position: absolute; left: 0px; top: 0px; width: 595px; height: 28px; text-align: center; font-size: 20px; font-weight: bold; z-index: 10;">
+            <div class="dygraph-label dygraph-title">Chart Title</div>
+        </div>
+        <div style="position: absolute; left: 0px; top: 282px; width: 595px; height: 18px; text-align: center; font-size: 16px;">
+            <div class="dygraph-label dygraph-xlabel">Date</div>
+        </div>
+        <div style="position: absolute; left: 0px; top: 28px; width: 0px; height: 254px; font-size: 16px;">
+            <div style="position: absolute; width: 254px; height: 0px; top: 127px; left: -127px; text-align: center; transform: rotate(-90deg);">
+                <div class="dygraph-label dygraph-ylabel">Temperature (F)</div>
+            </div>
+        </div>
+        <input type="text" size="2" style="display: none; position: absolute; z-index: 10; top: 237px; left: 57px;">
+        <div class="dygraph-legend" style="position: absolute; font-size: 14px; z-index: 10; width: 250px; top: 28px; left: 344px; line-height: normal; text-align: left; overflow: hidden; border: 1px solid black; display: none; background: white;"></div>
+        <div style="position: absolute; font-size: 14px; z-index: 10; color: black; width: 50px; line-height: normal; overflow: hidden; top: 198.357px; left: 3px; text-align: right;">
+            <div class="dygraph-axis-label dygraph-axis-label-y">40</div>
+        </div>
+        <div style="position: absolute; font-size: 14px; z-index: 10; color: black; width: 50px; line-height: normal; overflow: hidden; top: 136.452px; left: 3px; text-align: right;">
+            <div class="dygraph-axis-label dygraph-axis-label-y">60</div>
+        </div>
+        <div style="position: absolute; font-size: 14px; z-index: 10; color: black; width: 50px; line-height: normal; overflow: hidden; top: 74.5476px; left: 3px; text-align: right;">
+            <div class="dygraph-axis-label dygraph-axis-label-y">80</div>
+        </div>
+        <div style="position: absolute; font-size: 14px; z-index: 10; color: black; width: 60px; line-height: normal; overflow: hidden; text-align: center; top: 265px; left: 26px;">
+            <div class="dygraph-axis-label dygraph-axis-label-x">Jan&nbsp;2007</div>
+        </div>
+        <div style="position: absolute; font-size: 14px; z-index: 10; color: black; width: 60px; line-height: normal; overflow: hidden; text-align: center; top: 265px; left: 159.208px;">
+            <div class="dygraph-axis-label dygraph-axis-label-x">Apr&nbsp;2007</div>
+        </div>
+        <div style="position: absolute; font-size: 14px; z-index: 10; color: black; width: 60px; line-height: normal; overflow: hidden; text-align: center; top: 265px; left: 293.958px;">
+            <div class="dygraph-axis-label dygraph-axis-label-x">Jul&nbsp;2007</div>
+        </div>
+        <div style="position: absolute; font-size: 14px; z-index: 10; color: black; width: 60px; line-height: normal; overflow: hidden; text-align: center; top: 265px; left: 430.188px;">
+            <div class="dygraph-axis-label dygraph-axis-label-x">Oct&nbsp;2007</div>
+        </div>
+    </div>
+</div>
+  <script>
+    var g = new Dygraph(document.getElementById('bordered'), data,
+    {
+      labelsDivStyles: { border: '1px solid black' },
+      title: 'Chart Title',
+      xlabel: 'Date',
+      ylabel: 'Temperature (F)'
+    });
+  </script>
+</body>
+</html>
+
+<head>
+
+  </head>
